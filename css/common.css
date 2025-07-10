@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+*, ::before, ::after {box-sizing: border-box;}
+
+body,
+input,
+select,
+textarea {font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', 'hirakakupro-w3'}
+
+body {line-height: 1.5; background: #fff; margin: 0 auto; -webkit-text-size-adjust:100% }
+
+#container {font-size: 120%; max-width: 1000px; margin: 0 auto; min-width: 360px;}
+#container {padding: .5em 2% 2em;}
+.button_wrap {text-align: center; margin: 3em 0 0; position: relative;}
+/* section {background: #F3F3F3; margin: 1em 0;} */
+
+/* ==========
+ヘッダ・フッタ
+========== */
+/* ヘッダ */
+header::before {position: absolute; top: 0; left: 0; display: block; width: 100%; height: 3px; background: linear-gradient(to right, #0074bf 0%, #00cde5 100%); content: "";}
+header {padding: 15px 0; border-bottom: 2px solid #8e9300;}
+header p {margin: 0 auto; max-width: 1000px; padding: 0 2%;}
+
+/* フッタ */
+footer { margin-top: 2rem; padding-top: 1rem; border-top: solid 1px #ccc; font-size: 10pt; line-height: 1.8; text-align: center; }
+
+/* 基本タグ */
+h1, h2, h3, h4, h5, h6 {margin: 2em 0 0.5em;}
+h1:first-child, h2:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child, ul:first-child {margin-top: 0;}
+p:last-child, ul:last-child {margin-bottom: 0;}
+
+h1 {font-size: 160%; margin-bottom: 0.3em;}
+h2 {font-size: 140%;}
+h3 {font-size: 130%;}
+h4 {font-size: 120%;}
+h5,
+h6 {font-size: 100%;}
+
+[href^="tel:"] {
+    color: #333;
+    text-decoration: none;
+    cursor: default;
+}
+/* ==========
+スマホ
+ ========== */
+@media only screen and (max-width: 639px) {
+	body {font-size: 80%;}
+	header {padding-top: 10px; padding-bottom: 10px;}
+	header::before {content: none;}
+	footer .policy,
+	footer .copy {float: none; display: block;}
+	h2 {text-align: center;}
+
+	input[type="radio"],
+	input[type="checkbox"]{-webkit-transform: scale(1.5); transform: scale(1.5); margin-right: 0.6em;}
+
+	input[type="text"],
+	label {width: 100%; margin-right: 0; margin-left: 0;}
+
+	label {padding-left: 0px;}
+	label.add {padding-left: 5px;}
+	input.btn_submit {width: 90%;}
+	input[type="button"].back {position: relative;}
+}
