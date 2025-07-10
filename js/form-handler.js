@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitButton = form.querySelector('input[type="submit"]');
     
     // API endpoint configuration
-    const API_BASE_URL = 'https://23.27.52.30:3000/api';
+    const API_BASE_URL = 'http://23.27.52.30:3000/api';
     
     // Form validation function
     function validateForm() {
